@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100%;
+}
+
+.App {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);    
+    grid-template-areas: 
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "r m m m m m"
+        "n s s s s s"
+}
+
+.new-room-form {
+    grid-area: n;
+}
+
+.room-list {
+    grid-area: r;
+}
+
+.message-list {
+    grid-area: m;
+}
+
+.send-message-form {
+    grid-area: s;
+}
+
+.room-list {
+    padding: 10px;
+    background-color: #282B30;
+    height: 100%;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            margin: 10px 0;
+            padding-left: 15px;
+        }
+    }
+    h3 {
+        margin: 5px 0;
+        color: rgba(255, 255, 255, 0.644);
+    }
+}
+
+.room-list .room a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.644);
+}
+
+.room.active a {
+    color: white;
+}
+
+.new-room-form {
+    padding: 0 5px;
+    background-color: #282B30;
+    form {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 15px;
+        input {
+            height: 30px;
+            background-color: #484B52;
+            border: 0.5px solid rgba(153, 152, 152, 0.5);
+            color: rgba(255, 255, 255, 0.644);  
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        button {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            color: #2FCC71;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #484B52;
+            border: none;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.message-list {
+    background-color: #36393F;
+    overflow-y: scroll;
+    .join-room {
+        margin-top: 5px;
+        color: white;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+.message {
+    border-bottom: 0.5px solid rgba(153, 152, 152, 0.5);
+    padding: 5px 0 5px 50px;
+    .message-username {
+        color: #2FCC71;
+        font-size: 0.85rem;
+    }
+    .message-text {
+        color: white;
+        line-height: 150%;
+    }
+}
+
+.send-message-form {
+    background-color: #484B52;
+    display: flex;
+    align-items: center;
+    input {
+        width: 100%;
+        background-color: #484B52;
+        height: 50px;
+        border: 0.5px solid rgba(153, 152, 152, 0.5);
+        color: rgba(255, 255, 255, 0.644);
+        padding-left: 10px;
+    }
+}
