@@ -1,3 +1,9 @@
+Czat grupowy z wieloma pokojami napisany w React.js z wykorzystaniem Chatkit.
+
+
+to do:
+ekran logowania
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
